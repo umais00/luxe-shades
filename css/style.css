@@ -20,6 +20,10 @@ html{
     padding: 0;
     margin: 0;
 }
+body{
+    padding: 0;
+    margin: 0;
+}
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -91,9 +95,9 @@ h1,h2,h3,h4,h5,h6{
 
 
 /*** Navbar ***/
-/* .home-main{
-    height: 100vh;
-} */
+.home-main{
+   padding: 0;
+}
 .nav-bar {
     position: relative;
     margin-top: 45px;
@@ -201,15 +205,36 @@ h1,h2,h3,h4,h5,h6{
 
 /*** Header ***/
 .header h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 60px;
+    /* font-family: "Dancing Script", cursive; */
+    font-size: 40px;
 }
 @media (min-width: 992px) {
     .header {
         margin-top: -120px;
     }
+  
 }
-
+@media (max-width: 992px) {
+    .header {
+        margin-top: -120px;
+    }
+    .header h1{
+        font-size: 30px;
+    }
+  
+}
+@media (max-width: 375xpx) {
+    .header {
+        margin-top: -120px;
+    }
+    .header h1{
+        font-size: 20px;
+    }
+    .header p{
+        font-size: 10px;
+    }
+  
+}
 .header-carousel .owl-nav {
     position: absolute;
     top: 50%;
@@ -604,21 +629,17 @@ h1,h2,h3,h4,h5,h6{
 .accordion .accordion-content{
     margin: 10px 0;
     border-radius: 4px;
-    background: var(--light-color);
     border: 1px solid var(--primary);
     overflow: hidden;
     padding-bottom: 6px;
 }
 .accordion-content:nth-child(2){
-    background-color: var(--light-color);
     border-color: var(--primary);
 }
 .accordion-content:nth-child(3){
-    background-color: var(--light-color);
     border-color: var(--primary);
 }
 .accordion-content:nth-child(4){
-    background-color: var(--light-color);
     border-color: var(--primary);
 }
 .accordion-content.open{
