@@ -60,7 +60,9 @@ const sendEmail = () => {
     (response) => {
       console.log("Email sent successfully!", response);
       alert("Message sent!");
-      sendButton.disabled = false; // Re-enable the button after successful email sending
+
+      // Reload the page after successful email sending
+      location.reload();
     },
     (error) => {
       console.error("Failed to send email:", error);
